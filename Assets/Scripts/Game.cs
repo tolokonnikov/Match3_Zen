@@ -13,10 +13,22 @@ public class Game
     {
         Debug.Log($"Game::StartGame  {_config.height} / {_config.width}");
 
-        var test = _jewelFactory.Create("red");
-        JewelView jewelView = _jewelViewFactory.Create("red");
-        jewelView.Link(test);
+        var types = new string[] { "red", "blue", "green", "purple", "yellow" };
 
-        Debug.Log($"test: {test.GetGevelType()}");
+        for (int i = 0; i < _config.height; i++)
+            for (int j = 0; j < _config.width; j++)
+            {
+                var jewelView = Create(types[Random.Range(0, 5)]);
+                jewelView.transform.position = new Vector3(i, j, 0) - new Vector3(_config.height / 2, _config.width / 2, 0);
+            }
+
+    }
+
+    private JewelView Create(string type)
+    {
+        var jewel = _jewelFactory.Create(type);
+        JewelView jewelView = _jewelViewFactory.Create(type);
+        jewelView.Link(jewel);
+        return jewelView;
     }
 }
