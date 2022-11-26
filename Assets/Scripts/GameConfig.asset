@@ -14,3 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 10
   height: 20
+  jewels:
+  - type: red
+    prefab: {fileID: 3147066795683686096, guid: ebfdd15d055ae264483df27cfea667f8, type: 3}
+  - type: blue
+    prefab: {fileID: 1016213623042910681, guid: 349dcc4f76731cc499c79e3599295d19, type: 3}
+  - type: green
+    prefab: {fileID: 8334907220890732509, guid: 224ad15b5f5730445b06b169ed185dd0, type: 3}
+  - type: yellow
+    prefab: {fileID: 8631126054527768035, guid: f18569458a619d44e97dcdff38a8aad1, type: 3}
+  - type: purple
+    prefab: {fileID: 4785587914952526427, guid: 89591211a743a5b4dba7b4a293d26156, type: 3}

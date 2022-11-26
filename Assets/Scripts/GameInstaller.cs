@@ -13,5 +13,6 @@ public class GameInstaller : MonoInstaller
         Container.BindFactory<YellowJevel, YellowJevel.Factory>().WhenInjectedInto<JewelFactory>();
 
         Container.Bind<JewelFactory>().AsSingle();
+        Container.Bind<JewelViewFactory>().AsSingle();
     }
 }

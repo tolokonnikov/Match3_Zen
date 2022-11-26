@@ -8,6 +8,17 @@ public class Config : ScriptableObject
 {
     public int width = 10;
     public int height = 20;
+
+    public MappedJewel[] jewels;
+
+    public GameObject getJewelPrefab(string type)
+    {
+        foreach (var jewel in jewels)
+            if (jewel.type == type)
+                return jewel.prefab;
+
+        return null;
+    }
 }
 
 [Serializable]
