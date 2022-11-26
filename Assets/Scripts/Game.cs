@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-public class Game
+public class Game : IMatch3CoreListener
 {
     [Inject]
     private Config _config;
@@ -9,6 +9,12 @@ public class Game
     private JewelFactory _jewelFactory;
     [Inject]
     private JewelViewFactory _jewelViewFactory;
+
+    public Jewel OnNeedJewel()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void StartGame()
     {
         Debug.Log($"Game::StartGame  {_config.height} / {_config.width}");
